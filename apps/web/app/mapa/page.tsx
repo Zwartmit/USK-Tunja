@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TopNavBar from "@/components/TopNavBar";
+import Footer from "@/components/Footer";
 
 const sidebarLocations = [
   {
@@ -168,6 +169,7 @@ export default function MapaPage() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
