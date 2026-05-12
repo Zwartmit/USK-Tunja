@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Urban Sketchers Tunja</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neo-shadow {
+            box-shadow: 4px 4px 0px #1A1A1A;
+        }
+        .neo-shadow-hover:hover {
+            box-shadow: 4px 4px 0px #1A1A1A;
+            transform: translate(-2px, -2px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#EFEFEF",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#484645",
+                        "on-background": "#1c1b1b",
+                        "inverse-surface": "#313030",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c4c7c7",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#1c1b1b",
+                        "error": "#ba1a1a",
+                        "accent-stamp": "#D9381E",
+                        "surface-dim": "#ddd9d8",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary-fixed": "#e5e2e1",
+                        "surface": "#F9F9F8",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "paper": "#F9F9F8",
+                        "inverse-primary": "#c8c6c5",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "tertiary-fixed": "#e6e2df",
+                        "surface-container-low": "#f7f3f2",
+                        "inverse-on-surface": "#f4f0ef",
+                        "surface-container-high": "#ebe7e6",
+                        "on-tertiary-container": "#868382",
+                        "primary-container": "#1c1b1b",
+                        "secondary-fixed": "#e4e2e2",
+                        "on-primary-fixed-variant": "#474746",
+                        "tertiary-container": "#1c1b1a",
+                        "tertiary": "#000000",
+                        "surface-bright": "#fdf8f8",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#464747",
+                        "primary": "#000000",
+                        "surface-container": "#f1edec",
+                        "on-surface": "#1c1b1b",
+                        "outline": "#747878",
+                        "secondary-container": "#e1dfdf",
+                        "on-tertiary-fixed": "#1c1b1a",
+                        "tertiary-fixed-dim": "#cac6c4",
+                        "surface-tint": "#5f5e5e",
+                        "ink": "#1A1A1A",
+                        "secondary": "#5e5e5e",
+                        "on-secondary-container": "#626262",
+                        "on-primary-container": "#858383",
+                        "background": "#fdf8f8",
+                        "on-surface-variant": "#444748",
+                        "on-primary": "#ffffff",
+                        "cardboard": "#EFEFEF",
+                        "graphite": "#666666"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "edge-margin-mobile": "16px",
+                        "stack-md": "24px",
+                        "stack-sm": "8px",
+                        "edge-margin-desktop": "40px",
+                        "stack-lg": "48px",
+                        "gutter": "1px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "mono-label": ["Courier Prime"],
+                        "headline-md": ["Space Grotesk"],
+                        "mono": ["Courier Prime"],
+                        "headline-lg": ["Space Grotesk"],
+                        "body-md": ["Inter"],
+                        "headings": ["Space Grotesk"],
+                        "mono-sm": ["Courier Prime"],
+                        "headline-xl": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "mono-label": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "mono": "14px",
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "mono-sm": ["12px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-paper text-ink font-body-md min-h-screen flex flex-col selection:bg-accent-stamp selection:text-paper">
+<!-- TopNavBar -->
+<nav class="flex justify-between items-center px-edge-margin-mobile md:px-edge-margin-desktop py-4 sticky top-0 z-50 bg-paper dark:bg-ink w-full border-b-2 border-ink dark:border-paper">
+<div class="font-headings text-headline-md font-bold text-ink dark:text-paper uppercase">
+            USK TUNJA
+        </div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8 font-mono-label text-mono-label uppercase tracking-widest">
+<a class="text-accent-stamp font-bold underline decoration-2 underline-offset-4 Active: translate-y-0.5" href="#">ENCUENTROS</a>
+<a class="text-ink dark:text-paper opacity-80 hover:text-accent-stamp transition-colors duration-200" href="#">BOCETOS</a>
+<a class="text-ink dark:text-paper opacity-80 hover:text-accent-stamp transition-colors duration-200" href="#">MANIFIESTO</a>
+<a class="text-ink dark:text-paper opacity-80 hover:text-accent-stamp transition-colors duration-200" href="#">COMUNIDAD</a>
+</div>
+<button class="hidden md:block font-mono-label text-mono-label uppercase tracking-widest border-2 border-ink px-6 py-2 hover:text-accent-stamp transition-colors duration-200 neo-shadow-hover bg-paper text-ink">
+            UNIRSE
+        </button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden p-2 text-ink">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="border-b-2 border-ink px-edge-margin-mobile md:px-edge-margin-desktop py-stack-lg md:py-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-5 flex flex-col gap-6">
+<h1 class="font-headings text-headline-xl uppercase text-ink">
+                        Observar y Dibujar Tunja
+                    </h1>
+<p class="font-body-lg text-graphite max-w-md">
+                        Documentamos la ciudad línea por línea. Un colectivo de artistas, arquitectos y curiosos capturando la esencia urbana de Tunja a través del dibujo in situ.
+                    </p>
+<div class="flex gap-4 mt-4">
+<button class="font-mono-label text-mono-label uppercase tracking-widest border-2 border-ink px-8 py-3 bg-ink text-paper neo-shadow-hover transition-transform">
+                            PRÓXIMO ENCUENTRO
+                        </button>
+</div>
+</div>
+<div class="md:col-span-7 relative h-[614px] min-h-[400px] border-2 border-ink bg-surface neo-shadow p-4 flex flex-col">
+<img alt="Urban sketching in progress" class="w-full h-full object-cover border border-ink grayscale hover:grayscale-0 transition-all duration-500" data-alt="A detailed, raw urban sketch of a colonial street corner in Tunja, Colombia, executed in black India ink and loose watercolor washes on textured paper. The style is neobrutalist and documentary, capturing the historical architecture with structural lines and high contrast. The drawing sits on a rough wooden table beside an open sketchbook, a metal technical pen, and a travel watercolor tin. The lighting is natural and bright, emphasizing the tactile, fanzine-like quality of the artwork." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFFKYo089yGPaU22NiO_gq7NO82SmxZHok-7blfQN8z4qocUUxtTt3usmZQm35JOhEwqZqBHmL5C91Y5xNS-M_1R8wrg3xxqP7OrsXFPQe_P7baLjAX1xDUcEn7nmOX9u3wu61ID7-huPzzHi0FBX6bA-byXFPp-NxP_9BqyDgwisE6vbWa--LQ0yZnOZAeZiRjfNDLp9HBY8iADtNAG-Lr37WxQtYzycBFmLAKd4T6SqzL7GnWZ9nYRL2LKySw7Cpxuyv5LJWak8"/>
+<div class="mt-4 font-mono-sm text-mono-sm uppercase text-ink flex justify-between border-t border-ink pt-2">
+<span>[PLAZA DE BOLÍVAR]</span>
+<span>TINTA Y ACUARELA</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Próximo Encuentro (Boarding Pass Style) -->
+<section class="border-b-2 border-ink px-edge-margin-mobile md:px-edge-margin-desktop py-stack-lg bg-surface-variant">
+<div class="max-w-4xl mx-auto">
+<h2 class="font-headings text-headline-lg uppercase text-ink mb-8 border-b-2 border-ink pb-2 inline-block">
+                    CONVOCATORIA #42
+                </h2>
+<div class="border-2 border-ink bg-paper flex flex-col md:flex-row neo-shadow">
+<!-- Stub -->
+<div class="md:w-1/4 border-b-2 md:border-b-0 md:border-r-2 border-ink p-6 flex flex-col justify-center items-center bg-accent-stamp text-paper">
+<span class="font-headings text-headline-xl font-bold">24</span>
+<span class="font-mono-label text-mono-label tracking-widest uppercase">AGOSTO</span>
+</div>
+<!-- Main details -->
+<div class="flex-grow p-6 md:p-8 grid grid-cols-2 gap-y-6">
+<div class="col-span-2 md:col-span-1">
+<span class="block font-mono-sm text-mono-sm text-graphite mb-1 uppercase">LOCACIÓN</span>
+<span class="font-headings text-headline-md text-ink uppercase">Plazoleta San Ignacio</span>
+</div>
+<div class="col-span-2 md:col-span-1">
+<span class="block font-mono-sm text-mono-sm text-graphite mb-1 uppercase">HORA DE ENCUENTRO</span>
+<span class="font-mono-label text-mono-label text-ink">09:00 AM - 12:00 PM</span>
+</div>
+<div class="col-span-2">
+<span class="block font-mono-sm text-mono-sm text-graphite mb-1 uppercase">TEMA</span>
+<span class="font-body-md text-ink">Arquitectura republicana y movimiento peatonal. Trae tu propio material (sillas plegables recomendadas).</span>
+</div>
+<div class="col-span-2 pt-4 border-t border-ink flex justify-between items-center">
+<span class="font-mono-sm text-mono-sm text-graphite">ENTRADA LIBRE</span>
+<button class="font-mono-label text-mono-label border border-ink px-4 py-2 hover:bg-ink hover:text-paper transition-colors uppercase">
+                                CONFIRMAR ASISTENCIA
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Últimos Bocetos Grid -->
+<section class="border-b-2 border-ink px-edge-margin-mobile md:px-edge-margin-desktop py-stack-lg">
+<div class="flex justify-between items-end mb-8 border-b-2 border-ink pb-4">
+<h2 class="font-headings text-headline-lg uppercase text-ink">
+                    ARCHIVO RECIENTE
+                </h2>
+<a class="font-mono-label text-mono-label hover:text-accent-stamp uppercase hidden md:block" href="#">VER TODOS -&gt;</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-l-2 border-t-2 border-ink">
+<!-- Card 1 -->
+<div class="border-r-2 border-b-2 border-ink group">
+<div class="aspect-square p-4 bg-surface">
+<img alt="Sketch 1" class="w-full h-full object-cover border border-ink filter grayscale group-hover:grayscale-0 transition-all" data-alt="A close-up of an intricate ink architectural sketch of a historic cathedral facade in Tunja. The drawing is on rough, cream-colored watercolor paper, showing precise hatching and cross-hatching techniques. Splatters of black ink are visible on the edges. The aesthetic is raw, documentary, and neobrutalist, presented in high contrast black and white with a stark fanzine-style layout. Natural, flat lighting highlights the paper texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9zOIey9JBsqXXphu8s_aH8zony0pyavgCyc7chADvSJk40Z9otMNucOzylCoxDjJz-smT1fRw9Xkluu_LBcaXb9bPaK3R-K510oEr6pPokkN6GbxuhLDmxufTnNOzUGhpkH53JImh0Ju0BmkAuY7fXWPH4EeY9JKalkuIq4HyxoC3QD0A6vFf1ZDBELysNtB7lsvIewfk6ba1wNhOvcJtJAobGxRxmLbadVlSe2VVUi3ZHsg_TQ38g34k9DqbD_oAj_AWjmT3amM"/>
+</div>
+<div class="p-4 border-t border-ink bg-paper flex flex-col gap-2">
+<span class="font-mono-label text-mono-label font-bold text-ink uppercase">CATEDRAL BASÍLICA</span>
+<div class="flex justify-between font-mono-sm text-mono-sm text-graphite uppercase">
+<span>POR: A. GÓMEZ</span>
+<span>[TINTA CHINA]</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="border-r-2 border-b-2 border-ink group">
+<div class="aspect-[4/5] md:aspect-square p-4 bg-surface">
+<img alt="Sketch 2" class="w-full h-full object-cover border border-ink filter grayscale group-hover:grayscale-0 transition-all" data-alt="A loose, expressive watercolor and graphite sketch of a busy marketplace in Tunja. The artwork features quick, gestural lines capturing vendors and pedestrians, with bold washes of desaturated colors over the linework. The sketch is centered on a piece of cold-press paper with raw, torn edges, set against a solid stark white background. The composition feels immediate and journalistic, aligning with an urban documentary zine aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTnwevEiM5gnN2YSPqLjzNXze-h_GhopdEUYG5sNSovSrjG4mD146qWWNH_Bs_8r4mDjNLq7hOatagqFg-x2eSOZEmCbH8wwNQpupb5JRJDr_06x7tRx5KVuVpYzHrh9iwspF4WzC0qoMU6sKP_6LkJFjBXxqFIQEV_MVMwgf1BtvrTQ43WzEDepZhRSlcUx-cd0H5Toi2WaCQh0a5DQI4AgsDKMao7ADjPm5oDVRU495SLrooagY-dBGUqwsqbjUO8KwKcgFPk0c"/>
+</div>
+<div class="p-4 border-t border-ink bg-paper flex flex-col gap-2">
+<span class="font-mono-label text-mono-label font-bold text-ink uppercase">MERCADO DEL SUR</span>
+<div class="flex justify-between font-mono-sm text-mono-sm text-graphite uppercase">
+<span>POR: M. ROJAS</span>
+<span>[ACUARELA]</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="border-r-2 border-b-2 border-ink group">
+<div class="aspect-square p-4 bg-surface">
+<img alt="Sketch 3" class="w-full h-full object-cover border border-ink filter grayscale group-hover:grayscale-0 transition-all" data-alt="A minimalist architectural line drawing of the Bosque de la República park gates in Tunja, created using a fine black technical pen. The drawing is stark, structured, and geometric, utilizing a high-contrast neobrutalist aesthetic. It is framed within a solid 1px black border on stark white paper. The visual style is reminiscent of early architectural blueprints or a low-fi indie fanzine, with no shading, relying entirely on line weight for depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeEFuxIUJAsF-ga5L6BNFnghboiYIM3jbEcItftGoRJ15wUY9F2H6Hf3AL3uJVVIQe39m0rPKSve2G0eHWEUDR-hQCeb4wWv23dvrrvsuE12QyTY9cUQP-jZzQuMirpqRv9OrRh7uwG5vUh7iln6Qd-l8Ik0-10kHtEiyBbG0c8cjh_citoszl9KWAMZIk4dGKmW0YvgQlKT7Ob-Hu8nBXOfNuLNmiydxLaTpNq3xNRobtxnLeVQzEECQ6Qb8NMcU31acwRFrp9Yk"/>
+</div>
+<div class="p-4 border-t border-ink bg-paper flex flex-col gap-2">
+<span class="font-mono-label text-mono-label font-bold text-ink uppercase">BOSQUE DE LA REPÚBLICA</span>
+<div class="flex justify-between font-mono-sm text-mono-sm text-graphite uppercase">
+<span>POR: J. SILVA</span>
+<span>[LINER 0.5]</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center md:hidden">
+<a class="font-mono-label text-mono-label border-b border-ink pb-1 uppercase inline-block" href="#">VER TODOS LOS BOCETOS</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col md:flex-row justify-between items-center gap-stack-md px-edge-margin-mobile md:px-edge-margin-desktop py-stack-lg w-full border-t-4 border-accent-stamp bg-ink dark:bg-black Transition-all duration-300">
+<div class="font-headings text-headline-lg font-bold text-paper">
+            USK TUNJA
+        </div>
+<div class="flex flex-wrap justify-center gap-6 font-mono-sm text-mono-sm uppercase">
+<a class="text-paper opacity-60 hover:text-accent-stamp underline transition-colors" href="#">INSTAGRAM</a>
+<a class="text-paper opacity-60 hover:text-accent-stamp underline transition-colors" href="#">CONTACTO</a>
+<a class="text-paper opacity-60 hover:text-accent-stamp underline transition-colors" href="#">RECURSOS</a>
+<a class="text-paper opacity-60 hover:text-accent-stamp underline transition-colors" href="#">LEGAL</a>
+</div>
+<div class="font-mono-sm text-mono-sm uppercase text-paper opacity-60 text-center md:text-right max-w-xs">
+            © 2024 URBAN SKETCHERS TUNJA - DIBUJANDO EL MUNDO DIBUJO A DIBUJO
+        </div>
+</footer>
+</body></html>

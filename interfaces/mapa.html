@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cartografía - Urban Sketchers Tunja</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#e6e2df",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "surface-container": "#f1edec",
+                      "inverse-primary": "#c8c6c5",
+                      "secondary-container": "#e1dfdf",
+                      "on-tertiary-fixed": "#1c1b1a",
+                      "on-secondary-container": "#626262",
+                      "primary": "#000000",
+                      "error-container": "#ffdad6",
+                      "surface-variant": "#EFEFEF",
+                      "accent-stamp": "#D9381E",
+                      "outline-variant": "#c4c7c7",
+                      "on-background": "#1c1b1b",
+                      "primary-container": "#1c1b1b",
+                      "outline": "#747878",
+                      "surface-container-highest": "#e5e2e1",
+                      "tertiary-fixed-dim": "#cac6c4",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#1c1b1a",
+                      "ink": "#1A1A1A",
+                      "on-secondary": "#ffffff",
+                      "background": "#fdf8f8",
+                      "on-surface": "#1A1A1A",
+                      "surface-bright": "#fdf8f8",
+                      "on-tertiary-container": "#868382",
+                      "on-primary-fixed-variant": "#474746",
+                      "on-tertiary-fixed-variant": "#484645",
+                      "paper": "#F9F9F8",
+                      "secondary": "#5e5e5e",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-low": "#f7f3f2",
+                      "inverse-surface": "#313030",
+                      "graphite": "#666666",
+                      "primary-fixed": "#e5e2e1",
+                      "inverse-on-surface": "#f4f0ef",
+                      "tertiary": "#000000",
+                      "on-surface-variant": "#444748",
+                      "on-primary-fixed": "#1c1b1b",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed": "#e4e2e2",
+                      "surface-container-high": "#ebe7e6",
+                      "cardboard": "#EFEFEF",
+                      "surface-tint": "#5f5e5e",
+                      "surface-dim": "#ddd9d8",
+                      "secondary-fixed-dim": "#c7c6c6",
+                      "on-secondary-fixed-variant": "#464747",
+                      "on-primary-container": "#858383",
+                      "surface": "#F9F9F8",
+                      "on-primary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed": "#1b1c1c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "0px"
+              },
+              "spacing": {
+                      "stack-md": "24px",
+                      "stack-lg": "48px",
+                      "edge-margin-mobile": "16px",
+                      "unit": "4px",
+                      "edge-margin-desktop": "40px",
+                      "stack-sm": "8px",
+                      "gutter": "1px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "mono-label": ["Courier Prime"],
+                      "headline-xl": ["Space Grotesk"],
+                      "headline-md": ["Space Grotesk"],
+                      "headings": ["Space Grotesk"],
+                      "mono-sm": ["Courier Prime"],
+                      "mono": ["Courier Prime"],
+                      "body-md": ["Inter"],
+                      "headline-lg": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "mono-label": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                      "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "mono-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                      "mono": "14px",
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* CSS grid pattern for map background */
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, #e5e2e1 1px, transparent 1px),
+                              linear-gradient(to bottom, #e5e2e1 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        
+        /* Neobrutalist solid shadow */
+        .shadow-solid {
+            box-shadow: 4px 4px 0px 0px #1A1A1A;
+        }
+        
+        /* Custom scrollbar for raw aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #EFEFEF;
+            border-left: 1px solid #1A1A1A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1A1A1A;
+        }
+    </style>
+</head>
+<body class="bg-paper text-ink font-body-md h-screen flex flex-col overflow-hidden">
+<!-- TopNavBar -->
+<nav class="flex justify-between items-center px-edge-margin-mobile md:px-edge-margin-desktop py-4 sticky top-0 z-50 bg-paper border-b-2 border-ink w-full shrink-0">
+<div class="font-headings text-headline-md font-bold text-ink uppercase">
+            USK TUNJA
+        </div>
+<div class="hidden md:flex items-center gap-stack-md font-mono-label text-mono-label uppercase tracking-widest">
+<a class="text-ink opacity-80 hover:text-accent-stamp transition-colors duration-200" href="#">ENCUENTROS</a>
+<a class="text-accent-stamp font-bold underline decoration-2 underline-offset-4" href="#">BOCETOS</a>
+<a class="text-ink opacity-80 hover:text-accent-stamp transition-colors duration-200" href="#">MANIFIESTO</a>
+<a class="text-ink opacity-80 hover:text-accent-stamp transition-colors duration-200" href="#">COMUNIDAD</a>
+</div>
+<button class="font-mono-label text-mono-label uppercase tracking-widest border border-ink px-4 py-2 hover:shadow-solid hover:-translate-y-1 transition-all bg-paper">
+            UNIRSE
+        </button>
+</nav>
+<!-- Main Content Area: Split Screen -->
+<main class="flex-1 flex flex-col md:flex-row h-full overflow-hidden">
+<!-- Sidebar (Left) -->
+<aside class="w-full md:w-[350px] flex flex-col border-b-2 md:border-b-0 md:border-r-2 border-ink bg-surface-variant shrink-0 h-[409px] md:h-full z-10">
+<!-- Header & Search -->
+<div class="p-edge-margin-mobile border-b-2 border-ink bg-surface-variant flex flex-col gap-4">
+<h1 class="font-headings text-headline-lg font-bold uppercase">RUTAS TRAZADAS</h1>
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-ink">search</span>
+<input class="w-full bg-paper border-2 border-ink py-2 pl-10 pr-4 font-mono-label text-mono-label uppercase focus:outline-none focus:ring-0 focus:border-ink placeholder:text-graphite" placeholder="BUSCAR UBICACIÓN..." type="text"/>
+</div>
+<div class="flex gap-2 flex-wrap mt-2">
+<span class="font-mono-sm text-mono-sm border border-ink px-2 py-1 bg-paper">[CENTRO_HISTORICO]</span>
+<span class="font-mono-sm text-mono-sm border border-ink px-2 py-1 bg-paper">[MERCADOS]</span>
+</div>
+</div>
+<!-- Scrollable List -->
+<div class="flex-1 overflow-y-auto bg-surface-variant">
+<!-- List Item 1 -->
+<div class="group flex gap-4 p-4 border-b border-ink hover:bg-paper cursor-pointer transition-colors">
+<div class="w-16 h-16 shrink-0 border border-ink bg-ink">
+<img class="w-full h-full object-cover grayscale mix-blend-luminosity opacity-80" data-alt="A gritty, black and white sketch-style documentary photograph of Plaza de Bolivar in Tunja. The image captures the historical architecture with high contrast shadows and stark lighting, characteristic of a raw fanzine aesthetic. The monumental stone structures feel solid and imposing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDca-4PFdu8O_mkwwCf3PlXs82mLPwgrUMGWFoszuCYIYm2No9_LcD9OYIjNiVlOMSS5LyLtNI3XocQOslsjJEBnNQcqxe-HXOe4Dbn4SQJeJVu5tdKyWlh-LL8A0qnMdyG7F2GI1vE2iatPE6oQ8sV1WwTAiXWAw6MaRYF2Jg_sbzEFB-TSSNL8JWXAj4XBFq0OD4OlLYeIDlABYtI7MNs4T4RrrhOjnIF8qN1sYzPerGB80CrUYFrC73QAZ9Zk6doQGGqxG8_aVk"/>
+</div>
+<div class="flex flex-col justify-between py-1">
+<h3 class="font-headings text-headline-md font-bold uppercase leading-tight group-hover:text-accent-stamp transition-colors">Plaza de Bolívar</h3>
+<div class="font-mono-sm text-mono-sm text-graphite mt-1">
+                            &gt; LAT: 5.5333° N<br/>
+                            &gt; LNG: 73.3667° W
+                        </div>
+</div>
+</div>
+<!-- List Item 2 (Active) -->
+<div class="group flex gap-4 p-4 border-b border-ink bg-paper cursor-pointer relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-accent-stamp"></div>
+<div class="w-16 h-16 shrink-0 border border-ink bg-ink">
+<img class="w-full h-full object-cover grayscale mix-blend-luminosity opacity-80" data-alt="A high-contrast, black and white gritty photograph depicting a dense urban park, representing Bosque de la Republica. The trees cast stark, hard shadows against concrete paths, emulating a stark, minimalist documentary style typical of urban sketching documentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQguiR80WGybJQD4WWXA9iFhdpSnD48bjGKB1VMLfE3amgfTDhGW_LXjhri6h0SYNJzVuOnN0hBfeY7VIBDfrtsLLgTfqwr54JlN3l-Tb7SGLo4QwEBG8rm6jdj0Q0n46R9dA5P44-r7pett0IYRycQWNqLx1-4F_WPWdMvZuHkv3K_J6Vw-mggvOlo_XfxcYUQ0eRmievPS-IrEuCEQ-GBzDSVew0TncwfpB3E0Fj9ODFXpyCBV0tFGjPCwCi7LFPmSxS7Ei5Qes"/>
+</div>
+<div class="flex flex-col justify-between py-1">
+<h3 class="font-headings text-headline-md font-bold uppercase leading-tight text-accent-stamp">Bosque de la República</h3>
+<div class="font-mono-sm text-mono-sm text-graphite mt-1">
+                            &gt; LAT: 5.5312° N<br/>
+                            &gt; LNG: 73.3621° W
+                        </div>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="group flex gap-4 p-4 border-b border-ink hover:bg-paper cursor-pointer transition-colors">
+<div class="w-16 h-16 shrink-0 border border-ink bg-ink">
+<img class="w-full h-full object-cover grayscale mix-blend-luminosity opacity-80" data-alt="A raw, desaturated image showing a bustling traditional market scene, capturing Mercado del Sur. The composition is dense with textures of awnings and stalls, rendered in a harsh, high-contrast monochrome style that emphasizes structural lines over fine details, fitting a zine aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsa4aEnB1f6IpxfCw48pUjtFVxPsjle6KE9eWwy_SVQVXNpxPb636sUPcUjW0mxRogthh7jgGibsdhA1eJjVus_A-f_e0K8TDqnt7I8rsayRIG8fIf1B_mFPA7RHmmiVNPDSpZSjk03kKOiOUuZwIqVGdCJOLynRkoHE48QjxPcTfQesYU-uWodFz7sHuSZhyfJjbo8k9Vepak_6VTJaCYc9L5mO9V-upHMCizWi2_dLj0-qjMSWS4N8Y91HPR2VBlZlNjVTHJEDw"/>
+</div>
+<div class="flex flex-col justify-between py-1">
+<h3 class="font-headings text-headline-md font-bold uppercase leading-tight group-hover:text-accent-stamp transition-colors">Mercado del Sur</h3>
+<div class="font-mono-sm text-mono-sm text-graphite mt-1">
+                            &gt; LAT: 5.5255° N<br/>
+                            &gt; LNG: 73.3550° W
+                        </div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Map Container (Right) -->
+<section class="flex-1 relative bg-surface bg-grid-pattern h-[614px] md:h-full overflow-hidden flex items-center justify-center">
+<!-- Map Placeholder / Base -->
+<div class="absolute inset-0 opacity-20 pointer-events-none" data-alt="A highly stylized, desaturated map background representing the city grid of Tunja. It features harsh lines, high contrast between streets and blocks, and resembles a technical cartographic print or a blueprint translated into a raw, neobrutalist web aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlk7vyELj-aOZmMumU1dPIuNYadqCZH7ezD9DYLsIm0GxSVKIO5QgrGCHEU7ye2TWU-SpW8CSwYaw5oPr7Eo3EcxdsXOnhKTxRUjM4dn0dyR7DncBnaHURS_5laqelidqD4Gb5PSIta_4PUW4Ix7uDApfN3aCu8qgb3rIPmBKGRmvIrHR8SJ6jnxZ8zyBHiuXQZU1e_4sTUGn6DBuk7c18HgJO3ugHLx998zkd6QFCirmiFLCuxMZfaL5DdT-nbPGe88gzjTcAXAs'); background-size: cover; background-position: center;"></div>
+<!-- UI Overlay Controls (Bottom Right) -->
+<div class="absolute bottom-6 right-6 flex flex-col gap-2 z-20">
+<button class="w-10 h-10 bg-paper border-2 border-ink flex items-center justify-center hover:shadow-solid transition-all text-ink">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-10 h-10 bg-paper border-2 border-ink flex items-center justify-center hover:shadow-solid transition-all text-ink">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+<!-- Map Pin 1 -->
+<div class="absolute top-[30%] left-[40%] transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer z-10">
+<div class="w-4 h-4 bg-accent-stamp rounded-none rotate-45 border border-ink group-hover:scale-150 transition-transform"></div>
+<div class="h-8 w-0.5 bg-ink"></div>
+<span class="font-mono-sm text-mono-sm bg-paper border border-ink px-1 mt-1 opacity-0 group-hover:opacity-100 transition-opacity">PLZ_BOLIVAR</span>
+</div>
+<!-- Map Pin 2 (Active with Tooltip) -->
+<div class="absolute top-[50%] left-[60%] transform -translate-x-1/2 -translate-y-1/2 z-30">
+<!-- The Pin -->
+<div class="flex flex-col items-center">
+<div class="w-5 h-5 bg-accent-stamp flex items-center justify-center border-2 border-ink shadow-[2px_2px_0px_#1A1A1A]">
+<span class="text-paper text-[10px] font-bold">X</span>
+</div>
+<div class="h-10 w-0.5 bg-ink"></div>
+</div>
+<!-- Floating Tooltip Card -->
+<div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 w-[280px] bg-paper border-2 border-ink shadow-solid flex flex-col">
+<div class="p-2 border-b border-ink relative">
+<img class="w-full h-32 object-cover grayscale border border-ink" data-alt="A stark, high-contrast ink sketch of the Bosque de la Republica in Tunja. The drawing emphasizes rough textures, heavy architectural lines, and deep shadows, perfectly matching a documentary urban sketching fanzine style printed on rough paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvReDXthqTQgkSya0kc2k8UDogwLlkNZj6cLpHCoRTrl87nA_nNMeMCyivE6447ycDEt4hjFLjBlhpn6PYHm7WLPMEaQPRbRhQACIXt1lTQ9sFploC-glgIuQXFlJCTEZhQNXN34JfABjGU286L_ZZZzbH65dJXnXeYaSKQKzURG4xCCvsQ4K8iougcpOZM0w0ZDm0CH2M06mMep7ZmiUBayvLUB13OZKSXKO5x7BhXTql8smqWpt91AdTY0Z0mZro-x75VHXOrH0"/>
+<div class="absolute top-4 right-4 bg-accent-stamp text-paper font-mono-sm text-mono-sm px-2 py-0.5 border border-ink">
+                            ACTIVO
+                        </div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-paper">
+<h4 class="font-headings text-headline-md font-bold uppercase leading-tight">Bosque de la República</h4>
+<p class="font-mono-sm text-mono-sm text-graphite border-l-2 border-ink pl-2">
+                            Zona de alto contraste.<br/>
+                            Última sesión: Ayer.
+                        </p>
+<button class="mt-2 w-full bg-ink text-paper font-mono-label text-mono-label uppercase py-2 hover:bg-accent-stamp transition-colors flex items-center justify-between px-4">
+<span>VER 12 BOCETOS</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Map Pin 3 -->
+<div class="absolute top-[70%] left-[30%] transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer z-10">
+<div class="w-4 h-4 bg-accent-stamp rounded-none rotate-45 border border-ink group-hover:scale-150 transition-transform"></div>
+<div class="h-8 w-0.5 bg-ink"></div>
+<span class="font-mono-sm text-mono-sm bg-paper border border-ink px-1 mt-1 opacity-0 group-hover:opacity-100 transition-opacity">MERCADO_SUR</span>
+</div>
+<!-- Crosshair overlay for cartography feel -->
+<div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-10">
+<div class="w-full h-[1px] bg-ink absolute"></div>
+<div class="h-full w-[1px] bg-ink absolute"></div>
+<div class="w-32 h-32 border border-ink rounded-full absolute"></div>
+</div>
+</section>
+</main>
+</body></html>

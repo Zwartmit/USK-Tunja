@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bocetos | Urban Sketchers Tunja</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&amp;family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Masonry via Columns */
+        .masonry-grid {
+            column-gap: 2rem;
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#747878",
+                        "on-tertiary-fixed-variant": "#484645",
+                        "graphite": "#666666",
+                        "background": "#fdf8f8",
+                        "inverse-surface": "#313030",
+                        "surface-variant": "#e5e2e1",
+                        "secondary": "#5e5e5e",
+                        "surface-container-low": "#f7f3f2",
+                        "inverse-on-surface": "#f4f0ef",
+                        "surface-bright": "#fdf8f8",
+                        "secondary-container": "#e1dfdf",
+                        "inverse-primary": "#c8c6c5",
+                        "tertiary": "#000000",
+                        "ink": "#1A1A1A",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-tertiary-fixed": "#1c1b1a",
+                        "primary-fixed": "#e5e2e1",
+                        "on-error": "#ffffff",
+                        "cardboard": "#EFEFEF",
+                        "surface-dim": "#ddd9d8",
+                        "primary": "#000000",
+                        "on-primary-container": "#858383",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#F9F9F8",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e5e2e1",
+                        "tertiary-fixed-dim": "#cac6c4",
+                        "outline-variant": "#c4c7c7",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface-tint": "#5f5e5e",
+                        "surface-container-high": "#ebe7e6",
+                        "error": "#ba1a1a",
+                        "on-background": "#1c1b1b",
+                        "error-container": "#ffdad6",
+                        "paper": "#F9F9F8",
+                        "on-secondary-container": "#626262",
+                        "primary-container": "#1c1b1b",
+                        "surface-container": "#f1edec",
+                        "tertiary-fixed": "#e6e2df",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-surface": "#1c1b1b",
+                        "accent-stamp": "#D9381E",
+                        "on-surface-variant": "#444748",
+                        "tertiary-container": "#1c1b1a",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#464747",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#e4e2e2",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#868382",
+                        "on-primary-fixed-variant": "#474746"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "edge-margin-desktop": "40px",
+                        "stack-lg": "48px",
+                        "gutter": "1px",
+                        "unit": "4px",
+                        "edge-margin-mobile": "16px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Space Grotesk"],
+                        "mono": ["Courier Prime"],
+                        "mono-label": ["Courier Prime"],
+                        "headings": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Space Grotesk"],
+                        "mono-sm": ["Courier Prime"],
+                        "headline-md": ["Space Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "mono": "14px",
+                        "mono-label": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "mono-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-paper text-ink font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar Component -->
+<nav class="w-full border-b-2 border-ink dark:border-paper flex justify-between items-center px-edge-margin-mobile md:px-edge-margin-desktop py-4 sticky top-0 z-50 bg-paper dark:bg-ink">
+<div class="font-headings text-headline-md font-bold text-ink dark:text-paper uppercase tracking-tight">
+            USK TUNJA
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-mono-label text-mono-label uppercase tracking-widest text-ink dark:text-paper opacity-80 hover:text-accent-stamp transition-colors duration-200" href="#">ENCUENTROS</a>
+<a class="font-mono-label text-mono-label uppercase tracking-widest text-accent-stamp font-bold underline decoration-2 underline-offset-4 hover:text-accent-stamp transition-colors duration-200" href="#">BOCETOS</a>
+<a class="font-mono-label text-mono-label uppercase tracking-widest text-ink dark:text-paper opacity-80 hover:text-accent-stamp transition-colors duration-200" href="#">MANIFIESTO</a>
+<a class="font-mono-label text-mono-label uppercase tracking-widest text-ink dark:text-paper opacity-80 hover:text-accent-stamp transition-colors duration-200" href="#">COMUNIDAD</a>
+</div>
+<button class="font-mono-label text-mono-label uppercase tracking-widest border border-ink px-4 py-2 hover:shadow-[4px_4px_0px_#1A1A1A] hover:-translate-y-0.5 transition-all duration-200 bg-paper text-ink">
+            UNIRSE
+        </button>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col">
+<!-- Header Section -->
+<header class="px-edge-margin-mobile md:px-edge-margin-desktop py-stack-lg border-b-2 border-ink bg-surface flex flex-col md:flex-row justify-between items-baseline gap-stack-sm">
+<h1 class="font-headings text-headline-xl text-ink m-0">ARCHIVO DE BOCETOS</h1>
+<span class="font-mono text-mono text-graphite font-bold tracking-widest">[1,042 REGISTROS]</span>
+</header>
+<!-- Technical Filter Bar -->
+<section class="border-b-2 border-ink bg-paper flex flex-col md:flex-row items-stretch">
+<div class="flex flex-wrap flex-grow border-b md:border-b-0 border-ink md:border-r">
+<button class="px-6 py-3 border-r border-ink border-b md:border-b-0 font-mono-sm text-mono-sm uppercase tracking-wider bg-ink text-paper hover:bg-ink hover:text-paper transition-colors">TODAS LAS TÉCNICAS</button>
+<button class="px-6 py-3 border-r border-ink border-b md:border-b-0 font-mono-sm text-mono-sm uppercase tracking-wider hover:bg-surface-variant transition-colors">ACUARELA</button>
+<button class="px-6 py-3 border-r border-ink border-b md:border-b-0 font-mono-sm text-mono-sm uppercase tracking-wider hover:bg-surface-variant transition-colors">TINTA CHINA</button>
+<button class="px-6 py-3 border-r border-ink border-b md:border-b-0 font-mono-sm text-mono-sm uppercase tracking-wider hover:bg-surface-variant transition-colors">GRAFITO</button>
+<button class="px-6 py-3 border-b md:border-b-0 font-mono-sm text-mono-sm uppercase tracking-wider hover:bg-surface-variant transition-colors">DIGITAL</button>
+</div>
+<!-- Search Field -->
+<div class="flex items-center px-4 py-2 md:w-64 bg-paper group focus-within:bg-surface transition-colors">
+<span class="material-symbols-outlined text-ink mr-2">search</span>
+<input class="w-full bg-transparent border-none p-0 font-mono text-mono text-ink placeholder-graphite focus:ring-0 uppercase tracking-widest" placeholder="AUTOR..." type="text"/>
+</div>
+</section>
+<!-- Masonry Grid Area -->
+<section class="p-edge-margin-mobile md:p-edge-margin-desktop bg-surface-container-low min-h-screen">
+<div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 masonry-grid">
+<!-- Card 1 -->
+<article class="masonry-item relative group bg-surface border-2 border-ink p-stack-sm shadow-[4px_4px_0px_#1A1A1A] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#1A1A1A] transition-all duration-200">
+<div class="border border-ink overflow-hidden bg-white">
+<img alt="Boceto Plaza de Bolívar" class="w-full h-auto object-cover grayscale-[20%] sepia-[10%] contrast-125" data-alt="A detailed, loose architectural sketch of a colonial building in Tunja, Colombia, rendered in black India ink and light watercolor washes on textured off-white paper. The artwork sits within a neobrutalist web interface featuring rigid black borders and a subtle light-mode paper background. The stark contrast between the monochrome ink lines, the splashes of sepia watercolor, and the rigid digital frame creates a raw, documentary aesthetic typical of urban sketching fanzines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1W9BexE4hUmYDwl-cEZE8X24QUJM1i7v6WnD8yOF71rKx3C7_ZHCoCu-_GW6CLXAsIloMO7j5clML5zbPNuCQBR6yBModbv2HwDx0T-6erTNbbn8f-7cNDTxYwRictvFndybanaSRmCBFJVJ6jWyfik82VyrlRVACIzOhxzHVALSubBISn9bo7soAyrQloO0CPxO0ISE_cudSV9MeSHRhTMXFtav2XxWqW-3zsyRiuN7bPOcEK2Go0qvGExhiQ2dfhGIpu9E3mnQ"/>
+</div>
+<!-- Hover Effect Tag -->
+<div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-10 flex flex-col gap-1">
+<span class="bg-ink text-paper font-mono-sm text-mono-sm px-2 py-1 shadow-[2px_2px_0px_#D9381E] inline-block uppercase w-max">@JUAN_DIBUJA</span>
+<span class="bg-paper text-ink border border-ink font-mono-sm text-mono-sm px-2 py-1 shadow-[2px_2px_0px_#1A1A1A] inline-block uppercase w-max">PLAZA DE BOLÍVAR</span>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="masonry-item relative group bg-surface border-2 border-ink p-stack-sm shadow-[4px_4px_0px_#1A1A1A] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#1A1A1A] transition-all duration-200">
+<div class="border border-ink overflow-hidden bg-white">
+<img alt="Callejón" class="w-full h-auto object-cover grayscale contrast-150" data-alt="An expressive, messy graphite and charcoal sketch of a narrow, steep cobblestone street typical of Tunja, presented as a matted print inside a digital gallery card. The website's design system uses solid 2px black lines and high-contrast styling against a pale 'paper' background. The artwork itself emphasizes rough textures, smudged shadows, and strong perspective, lacking perfect polish to convey a raw, on-location documentary feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR32sxdIigSWIr3_ParXQJAVOgK7cQCRThjBX5FtBreiDlgtRhCfIpniTJlZC3GaBFPcVz2APSWHb9F0NYjvkodsm0saYi3K-b70wgZfhs6aO5KcqinBVHOWfs5FPeOzSy4sGF8KvkKnEnYQ0-iJGGslDosKWccC8GTEYNw8jXaAUmjd89iPo5zVh1KR9MduNVXBkaGxJ7Ck-oG8uVwG3aLokPs-vlDGNw43guwPqRKWtzq3RnF0wqZb1H5q2V3Sj63yU9264Jrto"/>
+</div>
+<div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-10 flex flex-col gap-1">
+<span class="bg-ink text-paper font-mono-sm text-mono-sm px-2 py-1 shadow-[2px_2px_0px_#D9381E] inline-block uppercase w-max">@ANA.SKETCH</span>
+<span class="bg-paper text-ink border border-ink font-mono-sm text-mono-sm px-2 py-1 shadow-[2px_2px_0px_#1A1A1A] inline-block uppercase w-max">CALLE 19</span>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="masonry-item relative group bg-surface border-2 border-ink p-stack-sm shadow-[4px_4px_0px_#1A1A1A] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#1A1A1A] transition-all duration-200">
+<div class="border border-ink overflow-hidden bg-white relative">
+<img alt="Puerta antigua" class="w-full h-auto object-cover contrast-125 saturate-50" data-alt="A vibrant yet restrained watercolor painting of an old ornate doorway in a historic Colombian town center, displayed within a strict grid layout. The web interface surrounds the art with a flat, light mode 'surface' tone and heavy 100% opacity offset shadows reminiscent of zine cutouts. The painting features delicate washes of earthy reds and ochres held together by energetic, jagged technical pen linework, emphasizing a grassroots, artistic approach." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoyhW08yaKmzf7bKrRCRMOHAV0pOg9w28L-_D4rHDNjCFKP5Eu3aLwsxAlXNis7KHkDtwjDXvxyLAzAJrUPC_53-YwXN_VPsMZdyUZhM1BGoKsZtt5S5yZAuAv_nqwfninJE2EpieyjIHYx7D-Yx7T1XKrTPZCPxMmWEEjdnZlIqpTOgKWetF_sTb4XwhRNBE_PIoYbCeHhZjQLokQrJcmgM1S32vb8mBLeXVhYVnWyJNcY6RJf43_HMBN82y4-TiUn6Rg81GrRR0"/>
+<!-- Red Accent Stamp simulating physical stamp on paper -->
+<div class="absolute top-2 right-2 border-2 border-accent-stamp text-accent-stamp font-headings text-[10px] font-bold p-1 rotate-12 opacity-80">
+                            SELECCIÓN
+                        </div>
+</div>
+<div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-10 flex flex-col gap-1">
+<span class="bg-ink text-paper font-mono-sm text-mono-sm px-2 py-1 shadow-[2px_2px_0px_#D9381E] inline-block uppercase w-max">@CARLOS_R</span>
+<span class="bg-paper text-ink border border-ink font-mono-sm text-mono-sm px-2 py-1 shadow-[2px_2px_0px_#1A1A1A] inline-block uppercase w-max">CASA DEL FUNDADOR</span>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="masonry-item relative group bg-surface border-2 border-ink p-stack-sm shadow-[4px_4px_0px_#1A1A1A] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#1A1A1A] transition-all duration-200">
+<div class="border border-ink overflow-hidden bg-white">
+<img alt="Personas en parque" class="w-full h-auto object-cover grayscale contrast-150 brightness-110" data-alt="A quick, spontaneous ink line drawing of people sitting on benches in a public plaza, captured from an urban sketcher's notebook. The surrounding digital UI relies entirely on monochromatic structures—sharp black dividing lines and light grayish-white backgrounds—creating a stark architectural frame. The artwork is characterized by rapid, cross-hatched lines and incomplete shapes that suggest movement and the fleeting nature of sketching on location." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxU34vwcoAY-htcj0IFvwpXokgXlrx8-ZlfaY_ytDpwNiKnErUymAWj-Dp2nH9f1hf8FGk81lMMbWHJVjgd_vrrXRYcGwmzBseUTgOZIrnLCdqoqiP5EnLfbCtWlQUpXkt5orOuhwPbWfwBlK5Wn0z-6zWYXmKqGLjRSEFtWz63XzLpLOm4j-cOGy-ZiMX0mAblwC6QSGVm4CWgXTTXxdZAXqecrKRIZwBWIkiRC0va9muJIAxjwtX0I6ZOShH-fhxrUya1JAK4vg"/>
+</div>
+<div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-10 flex flex-col gap-1">
+<span class="bg-ink text-paper font-mono-sm text-mono-sm px-2 py-1 shadow-[2px_2px_0px_#D9381E] inline-block uppercase w-max">@MARTA.L</span>
+<span class="bg-paper text-ink border border-ink font-mono-sm text-mono-sm px-2 py-1 shadow-[2px_2px_0px_#1A1A1A] inline-block uppercase w-max">PARQUE PINZÓN</span>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="masonry-item relative group bg-surface border-2 border-ink p-stack-sm shadow-[4px_4px_0px_#1A1A1A] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#1A1A1A] transition-all duration-200">
+<div class="border border-ink overflow-hidden bg-white">
+<img alt="Panorámica Tunja" class="w-full h-auto object-cover sepia-[20%] contrast-125" data-alt="A sweeping panoramic urban sketch of the Tunja skyline, featuring church domes and tiled rooftops, drawn with black markers and grey markers on white paper. The presentation mimics a high-end brutalist website, where images are contained within severe, hard-edged black boxes with solid drop shadows rather than soft gradients. The lighting implies a sterile, flat digital environment that forces the viewer to focus entirely on the textured, unrefined handmade art." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbKwcWK8YPMn5NzxlJ7Q2lwlBzt1Cqa80bx0QjNUDHVmcpyhzkPos0_SJQ1gW1sMnyC8ybODd3VVt6h2340LywYhtXqjW_uWVCiCirSasDw8Nm9Ca2yqYz5EweTChbSxjdqQfkdrL2Jf9gPMCQTaS1g9_b-351flY4N4XT9RS_OQ5UttQyRRwNP9Yz4IrqGB9h7GU-XqP_bNTwf2Wg2ep6GFt90_Fwck2NdspsMNvQN7igFVFqdKMo5aXBjt7lmGWNSUx4BZ-IICI"/>
+</div>
+<div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-10 flex flex-col gap-1">
+<span class="bg-ink text-paper font-mono-sm text-mono-sm px-2 py-1 shadow-[2px_2px_0px_#D9381E] inline-block uppercase w-max">@USK_TUNJA_OFICIAL</span>
+<span class="bg-paper text-ink border border-ink font-mono-sm text-mono-sm px-2 py-1 shadow-[2px_2px_0px_#1A1A1A] inline-block uppercase w-max">VISTA SUR</span>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full border-t-4 border-accent-stamp flex flex-col md:flex-row justify-between items-center gap-stack-md px-edge-margin-mobile md:px-edge-margin-desktop py-stack-lg bg-ink dark:bg-black text-paper dark:text-surface-variant transition-all duration-300">
+<div class="font-headings text-headline-lg font-bold text-paper text-center md:text-left">
+            USK TUNJA
+        </div>
+<div class="flex gap-6">
+<a class="font-mono-sm text-mono-sm uppercase text-paper opacity-60 hover:text-accent-stamp underline transition-all duration-300" href="#">INSTAGRAM</a>
+<a class="font-mono-sm text-mono-sm uppercase text-paper opacity-60 hover:text-accent-stamp underline transition-all duration-300" href="#">CONTACTO</a>
+<a class="font-mono-sm text-mono-sm uppercase text-paper opacity-60 hover:text-accent-stamp underline transition-all duration-300" href="#">RECURSOS</a>
+<a class="font-mono-sm text-mono-sm uppercase text-paper opacity-60 hover:text-accent-stamp underline transition-all duration-300" href="#">LEGAL</a>
+</div>
+<div class="font-mono-sm text-mono-sm uppercase text-paper opacity-60 text-center md:text-right">
+            © 2024 URBAN SKETCHERS TUNJA - DIBUJANDO EL MUNDO DIBUJO A DIBUJO
+        </div>
+</footer>
+</body></html>

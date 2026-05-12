@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Encuentros | USK TUNJA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#f7f3f2",
+                      "paper": "#F9F9F8",
+                      "surface-container-high": "#ebe7e6",
+                      "outline-variant": "#c4c7c7",
+                      "on-primary-fixed-variant": "#474746",
+                      "error-container": "#ffdad6",
+                      "surface-tint": "#5f5e5e",
+                      "on-background": "#1c1b1b",
+                      "tertiary": "#000000",
+                      "on-tertiary-fixed-variant": "#484645",
+                      "background": "#fdf8f8",
+                      "secondary-container": "#e1dfdf",
+                      "on-error": "#ffffff",
+                      "surface-variant": "#e5e2e1",
+                      "tertiary-container": "#1c1b1a",
+                      "tertiary-fixed": "#e6e2df",
+                      "surface-container-highest": "#e5e2e1",
+                      "on-tertiary-container": "#868382",
+                      "surface-dim": "#ddd9d8",
+                      "secondary-fixed": "#e4e2e2",
+                      "surface-container": "#f1edec",
+                      "on-surface": "#1A1A1A",
+                      "primary-fixed": "#e5e2e1",
+                      "on-secondary-container": "#626262",
+                      "on-secondary-fixed": "#1b1c1c",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#1c1b1b",
+                      "primary": "#000000",
+                      "tertiary-fixed-dim": "#cac6c4",
+                      "error": "#ba1a1a",
+                      "ink": "#1A1A1A",
+                      "surface": "#F9F9F8",
+                      "on-secondary-fixed-variant": "#464747",
+                      "surface-container-lowest": "#ffffff",
+                      "accent-stamp": "#D9381E",
+                      "graphite": "#666666",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed": "#1c1b1a",
+                      "on-surface-variant": "#444748",
+                      "cardboard": "#EFEFEF",
+                      "inverse-on-surface": "#f4f0ef",
+                      "inverse-surface": "#313030",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed-dim": "#c7c6c6",
+                      "on-secondary": "#ffffff",
+                      "inverse-primary": "#c8c6c5",
+                      "secondary": "#5e5e5e",
+                      "surface-bright": "#fdf8f8",
+                      "on-primary-container": "#858383",
+                      "outline": "#747878",
+                      "on-primary-fixed": "#1c1b1b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "1px",
+                      "unit": "4px",
+                      "stack-md": "24px",
+                      "stack-sm": "8px",
+                      "stack-lg": "48px",
+                      "edge-margin-mobile": "16px",
+                      "edge-margin-desktop": "40px"
+              },
+              "fontFamily": {
+                      "mono": ["Courier Prime"],
+                      "headline-md": ["Space Grotesk"],
+                      "headline-lg": ["Space Grotesk"],
+                      "mono-sm": ["Courier Prime"],
+                      "body-lg": ["Inter"],
+                      "mono-label": ["Courier Prime"],
+                      "headline-xl": ["Space Grotesk"],
+                      "headings": ["Space Grotesk"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "mono": "14px",
+                      "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "mono-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "mono-label": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                      "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .shadow-solid-offset { box-shadow: 4px 4px 0px 0px #1A1A1A; }
+        .shadow-solid-offset-sm { box-shadow: 2px 2px 0px 0px #1A1A1A; }
+        .hover\:shadow-solid-offset-hover:hover { box-shadow: 6px 6px 0px 0px #1A1A1A; transform: translate(-2px, -2px); }
+    </style>
+</head>
+<body class="bg-surface text-ink font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar Component -->
+<nav class="flex justify-between items-center px-edge-margin-mobile md:px-edge-margin-desktop py-4 sticky top-0 z-50 bg-paper dark:bg-ink w-full border-b-2 border-ink dark:border-paper">
+<div class="font-headings text-headline-md font-bold text-ink dark:text-paper">
+            USK TUNJA
+        </div>
+<div class="hidden md:flex gap-stack-md font-mono-label text-mono-label uppercase tracking-widest">
+<a class="text-accent-stamp font-bold underline decoration-2 underline-offset-4 Active: translate-y-0.5" href="#">ENCUENTROS</a>
+<a class="text-ink dark:text-paper opacity-80 hover:text-accent-stamp transition-colors duration-200" href="#">BOCETOS</a>
+<a class="text-ink dark:text-paper opacity-80 hover:text-accent-stamp transition-colors duration-200" href="#">MANIFIESTO</a>
+<a class="text-ink dark:text-paper opacity-80 hover:text-accent-stamp transition-colors duration-200" href="#">COMUNIDAD</a>
+</div>
+<button class="font-mono-label text-mono-label uppercase tracking-widest bg-ink text-paper px-4 py-2 hover:bg-accent-stamp transition-colors duration-200 hidden md:block">
+            UNIRSE
+        </button>
+<!-- Mobile Menu Icon (simplified) -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-ink text-3xl">menu</span>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col pt-stack-lg pb-stack-lg gap-stack-lg">
+<!-- Header -->
+<header class="px-edge-margin-mobile md:px-edge-margin-desktop flex flex-col gap-unit">
+<h1 class="font-headings text-headline-xl font-bold text-ink uppercase">BITÁCORA DE ENCUENTROS</h1>
+<p class="font-mono text-mono text-graphite">[55+ SALIDAS REGISTRADAS]</p>
+</header>
+<!-- Next Meeting Block (Próxima Convocatoria) -->
+<section class="px-edge-margin-mobile md:px-edge-margin-desktop">
+<div class="border-2 border-ink bg-paper p-stack-md md:p-stack-lg relative">
+<!-- Decorative absolute element -->
+<div class="absolute top-0 right-0 bg-accent-stamp text-paper font-mono-sm text-mono-sm px-2 py-1 border-b-2 border-l-2 border-ink">NUEVO</div>
+<h2 class="font-headings text-headline-lg font-bold uppercase mb-stack-md border-b-2 border-ink pb-unit inline-block">PRÓXIMA CONVOCATORIA</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<!-- Details -->
+<div class="flex flex-col gap-stack-sm font-mono text-mono">
+<div class="flex border-b border-ink pb-unit">
+<span class="w-32 font-bold">[SESIÓN]:</span>
+<span>#56</span>
+</div>
+<div class="flex border-b border-ink pb-unit">
+<span class="w-32 font-bold">[FECHA]:</span>
+<span>Sábado, 28 de Octubre 2024</span>
+</div>
+<div class="flex border-b border-ink pb-unit">
+<span class="w-32 font-bold">[HORA]:</span>
+<span>09:00 AM - 12:00 PM</span>
+</div>
+<div class="flex border-b border-ink pb-unit">
+<span class="w-32 font-bold">[PUNTO]:</span>
+<span>Plaza de Bolívar, Tunja (Frente a la Catedral)</span>
+</div>
+</div>
+<!-- Materials & Action -->
+<div class="flex flex-col gap-stack-md justify-between">
+<div class="border-2 border-ink p-stack-sm bg-surface">
+<h3 class="font-mono-label text-mono-label font-bold uppercase mb-unit border-b border-ink pb-unit">Materiales Sugeridos:</h3>
+<ul class="font-mono text-mono flex flex-col gap-unit">
+<li><span class="mr-2">[ ]</span>Libreta de bocetos o papel suelto</li>
+<li><span class="mr-2">[ ]</span>Lápiz, tinta o acuarelas</li>
+<li><span class="mr-2">[ ]</span>Silla plegable (opcional)</li>
+<li><span class="mr-2">[ ]</span>Agua y protección solar</li>
+</ul>
+</div>
+<button class="w-full bg-accent-stamp text-paper font-headings text-headline-md font-bold py-4 border-2 border-ink shadow-solid-offset hover:shadow-solid-offset-hover transition-all duration-200 uppercase tracking-wide">
+                            CONFIRMAR ASISTENCIA
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Historical Archive (El Registro) -->
+<section class="px-edge-margin-mobile md:px-edge-margin-desktop overflow-x-auto">
+<h2 class="font-headings text-headline-lg font-bold uppercase mb-stack-md">EL REGISTRO</h2>
+<div class="min-w-max border-2 border-ink">
+<!-- Table Header -->
+<div class="grid grid-cols-[100px_150px_1fr_250px] bg-ink text-paper font-mono-label text-mono-label font-bold uppercase border-b-2 border-ink">
+<div class="p-stack-sm border-r-2 border-ink">[SESIÓN]</div>
+<div class="p-stack-sm border-r-2 border-ink">[FECHA]</div>
+<div class="p-stack-sm border-r-2 border-ink">[LOCACIÓN]</div>
+<div class="p-stack-sm">[ACCIÓN]</div>
+</div>
+<!-- Table Rows -->
+<div class="flex flex-col font-mono text-mono">
+<div class="grid grid-cols-[100px_150px_1fr_250px] border-b border-ink hover:bg-surface-variant transition-colors duration-150 bg-paper">
+<div class="p-stack-sm border-r border-ink">#55</div>
+<div class="p-stack-sm border-r border-ink">14/10/24</div>
+<div class="p-stack-sm border-r border-ink">Convento de San Agustín</div>
+<div class="p-stack-sm flex items-center"><a class="font-bold hover:text-accent-stamp underline" href="#">VER FOTOS Y BOCETOS -&gt;</a></div>
+</div>
+<div class="grid grid-cols-[100px_150px_1fr_250px] border-b border-ink hover:bg-surface-variant transition-colors duration-150 bg-paper">
+<div class="p-stack-sm border-r border-ink">#54</div>
+<div class="p-stack-sm border-r border-ink">30/09/24</div>
+<div class="p-stack-sm border-r border-ink">Pila del Mono</div>
+<div class="p-stack-sm flex items-center"><a class="font-bold hover:text-accent-stamp underline" href="#">VER FOTOS Y BOCETOS -&gt;</a></div>
+</div>
+<div class="grid grid-cols-[100px_150px_1fr_250px] border-b border-ink hover:bg-surface-variant transition-colors duration-150 bg-paper">
+<div class="p-stack-sm border-r border-ink">#53</div>
+<div class="p-stack-sm border-r border-ink">16/09/24</div>
+<div class="p-stack-sm border-r border-ink">Universidad Pedagógica y Tecnológica de Colombia</div>
+<div class="p-stack-sm flex items-center"><a class="font-bold hover:text-accent-stamp underline" href="#">VER FOTOS Y BOCETOS -&gt;</a></div>
+</div>
+<div class="grid grid-cols-[100px_150px_1fr_250px] border-b border-ink hover:bg-surface-variant transition-colors duration-150 bg-paper">
+<div class="p-stack-sm border-r border-ink">#52</div>
+<div class="p-stack-sm border-r border-ink">02/09/24</div>
+<div class="p-stack-sm border-r border-ink">Parque Pinzón</div>
+<div class="p-stack-sm flex items-center"><a class="font-bold hover:text-accent-stamp underline" href="#">VER FOTOS Y BOCETOS -&gt;</a></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Sheet (Photographic Strip) -->
+<section class="mt-stack-md w-full overflow-hidden bg-ink py-unit border-t-4 border-b-4 border-ink">
+<!-- Simulated Film Strip Layout -->
+<div class="flex gap-unit px-unit animate-none overflow-x-auto snap-x hide-scrollbar">
+<!-- Image 1 -->
+<div class="flex-none w-64 h-48 border-2 border-paper bg-paper p-1 snap-center">
+<div class="w-full h-full bg-cover bg-center grayscale contrast-125" data-alt="A gritty, black and white photograph of a diverse group of urban sketchers standing in a historic plaza in Tunja. They are holding up open sketchbooks displaying ink and graphite drawings. The image has a raw, documentary style akin to a high-contrast film contact sheet, emphasizing the neobrutalist aesthetic of the overarching UI design. The lighting is natural, casting distinct shadows on the cobblestones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASSAkF-ecQjWxlImlY5VOTPuFPLfBNjUecBwipZwyhGHKqggkTUHX7TbtN0ypOQHLVJbiYSUkLT0lJ1Uoe9_vYhEkvkAL5iC_5CQi_fbXm2fRyQZ7oSXU7Ay-3-Am6O81bg87kYIKGAAy54Kaw-ChdUuwS5JqqVKjpE9vhSAxly5uDOtxinQA_fcAekSARvnavgINOb6x5Rxm19nByX1Nvx2x6lBoJICTyTqWeRijGZdzQ9cMqAvOfXTvqCZ1YjQ186Y5mqrp6MC8');"></div>
+</div>
+<!-- Image 2 -->
+<div class="flex-none w-64 h-48 border-2 border-paper bg-paper p-1 snap-center">
+<div class="w-full h-full bg-cover bg-center grayscale contrast-125" data-alt="A high-contrast monochrome image showing an over-the-shoulder view of an artist's hand sketching a colonial building with a technical pen. The sketchbook rests on their lap. The visual style mimics a raw photographic negative, aligning with the editorial, fanzine-inspired layout. Shadows are deep black, highlighting the stark architectural lines being drawn." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDf6aGTO8TtSP3jTHvRhHFEauw6IVI0GfDJorThfb4VqT60vDp_VDO7Cfn1OOIP0ucIzFJodxWZmv98nr1x6GVN3qoNnvtnafZnEXeREHk5QBNtUyIv9zxWDn8x7ClRjhljaob7EVqhMGMPqiwQZ5ee7F2fGe6_dC2-hFTwlMuIvcqrY240AHCFeYyvGVEntIb7zPtnkYehhobN_im-h9stqnffqitBK8rb6MiF8mi6Ohly5rT7d3N5vQecqChpdaHM0ieeuYNyiaI');"></div>
+</div>
+<!-- Image 3 -->
+<div class="flex-none w-64 h-48 border-2 border-paper bg-paper p-1 snap-center">
+<div class="w-full h-full bg-cover bg-center grayscale contrast-125" data-alt="A documentary-style black and white photo of three people sitting on stone steps in a city, intensely focused on drawing in their pads. The scene feels candid and unpolished, capturing the grassroots spirit of urban sketching. The image is rendered with harsh contrast, fitting the zine-like, monochrome design system framework." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDPssouLXg9veUgYL3yrZ3b3FgGanFr9saf_ZuBjzFlf74P_L3ynl2wxdHCf9ZLw0-mpXKUBbUEOWCUu5qIT7_4CHfXlSiD2xy_ip6NJyHpdSngL2U59-LeBnkVgU83Pa8HzHs4QmYTGYsTdkYwnCNRQWzfB_SdRvWZHRBRsOSaFo0_BerOeiUmeskbl4arZ0jo204yt68c1VIbRUu4BfvMxT0Y0x5Pk5vGtaNrdgmDPr9OHrs0noCAhvmA5CwKFRx5zOizUiifAJ4');"></div>
+</div>
+<!-- Image 4 -->
+<div class="flex-none w-64 h-48 border-2 border-paper bg-paper p-1 snap-center">
+<div class="w-full h-full bg-cover bg-center grayscale contrast-125" data-alt="A high-contrast black and white shot of scattered art supplies—pens, ink bottles, and an open sketchbook—resting on a textured concrete surface. The composition is structured yet messy, reflecting an architectural blueprint aesthetic mixed with urban grit. The lighting emphasizes the texture of the paper and the solid forms of the tools." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvHi4zkT-L2lveFUtbqJhxGnd0n2oUU_qhVushaRpJS83inyoZRxQqfk4WKa19J1W4Wh2utssDmuVyRGNsig50EXH5iJuUkowtYM_z6acQf5JM_tmcGRm0n58ApTTOBD4nbsQ5nVaRfxjx4BCtcJqJA4d1s6q7vz9UASkvBZRXmhwjWXou3VKFkejMfTNbjpEkvyUGJDBklTrdQO1oHWSSU5K1qKbanbWsouGjS6Ac5dOg1j9YJZBqHsnTO7F2W5otnKtmXfpkpW8');"></div>
+</div>
+</div>
+<!-- Film edge markings -->
+<div class="flex justify-between px-edge-margin-mobile text-paper font-mono-sm text-mono-sm opacity-50 mt-1">
+<span>[FRAME 01]</span>
+<span>[KODAK TRI-X]</span>
+<span>[FRAME 04]</span>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="flex flex-col md:flex-row justify-between items-center gap-stack-md px-edge-margin-mobile md:px-edge-margin-desktop py-stack-lg bg-ink dark:bg-black w-full border-t-4 border-accent-stamp Transition-all duration-300">
+<div class="font-headings text-headline-lg font-bold text-paper">
+            USK TUNJA
+        </div>
+<div class="text-paper dark:text-surface-variant font-mono-sm text-mono-sm uppercase text-center md:text-left">
+            © 2024 URBAN SKETCHERS TUNJA - DIBUJANDO EL MUNDO DIBUJO A DIBUJO
+        </div>
+<div class="flex gap-stack-md font-mono-sm text-mono-sm uppercase text-paper opacity-60">
+<a class="hover:text-accent-stamp underline" href="#">INSTAGRAM</a>
+<a class="hover:text-accent-stamp underline" href="#">CONTACTO</a>
+<a class="hover:text-accent-stamp underline" href="#">RECURSOS</a>
+<a class="hover:text-accent-stamp underline" href="#">LEGAL</a>
+</div>
+</footer>
+</body></html>
