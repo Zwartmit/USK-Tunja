@@ -1,6 +1,11 @@
 import { buildConfig } from "payload";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
+import dns from "dns";
+
+// Force IPv4 for all DNS lookups — Supabase direct host resolves only to IPv6
+// which causes ETIMEDOUT on networks without external IPv6 routing.
+dns.setDefaultResultOrder("ipv4first");
 
 import { Media } from "./collections/Media";
 import { Authors } from "./collections/Authors";
@@ -13,7 +18,8 @@ export default buildConfig({
   db: postgresAdapter({
     pool: {
       connectionString:
-        process.env.DATABASE_URL || "postgresql://localhost:5432/usk_tunja",
+        process.env.DATABASE_URI || "postgresql://localhost:5432/usk_tunja",
+      ssl: process.env.DATABASE_URI ? { rejectUnauthorized: false } : false,
     },
   }),
   editor: lexicalEditor({}),

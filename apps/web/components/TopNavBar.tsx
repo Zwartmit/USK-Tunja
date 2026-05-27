@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -15,12 +16,27 @@ export default function TopNavBar() {
 
   return (
     <nav className="flex justify-between items-center px-edge-margin-mobile md:px-edge-margin-desktop py-4 sticky top-0 z-50 bg-paper dark:bg-ink w-full border-b-2 border-ink dark:border-paper">
-      <Link
-        href="/"
-        className="font-headings text-headline-md font-bold text-ink dark:text-paper uppercase tracking-tight"
-      >
-        USK TUNJA
-      </Link>
+      <div className="flex items-center gap-4">
+        <Link href="/" className="flex items-center gap-3 group">
+          <Image
+            alt="Urban Sketchers network"
+            src="/usk-logo.jpg"
+            width={120}
+            height={120}
+            priority
+            className="group-hover:neo-shadow transition-all duration-200"
+            style={{ width: 'auto', height: '50px' }}
+          />
+          <div className="flex flex-col">
+            <span className="font-headings text-headline-sm font-bold text-ink dark:text-paper uppercase tracking-tight">
+              USK TUNJA
+            </span>
+            <div className="font-mono-sm text-[10px] text-graphite dark:text-paper/60 uppercase">
+              I'm an <span className="font-bold">urban sketcher</span>
+            </div>
+          </div>
+        </Link>
+      </div>
 
       {/* Desktop Nav */}
       <div className="hidden md:flex items-center gap-8 font-mono-label text-mono-label uppercase tracking-widest">
